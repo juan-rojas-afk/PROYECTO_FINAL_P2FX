@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="841.0" prefWidth="1254.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.programacion2.proyectofinalp2.viewController.AdministradorViewController">
+   <children>
+      <TabPane prefHeight="841.0" prefWidth="1254.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="Estadisticas" text="Estadisticas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="538.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#888176" height="681.0" layoutX="27.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="1178.0" />
+                        <RadioButton fx:id="rbtnCantidadMensajes2Ven" layoutX="60.0" layoutY="130.0" mnemonicParsing="false" text="Cantidad de mensajes enviados entre dos vendedores">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="rbntCantidadFecha" layoutX="60.0" layoutY="198.0" mnemonicParsing="false" text="Cantidad de productos publicados en:">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="rbtnCantidadPorVendedor" layoutX="60.0" layoutY="277.0" mnemonicParsing="false" text="Cantidad productos publicados por">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="rbtnContactosPorVendedor" layoutX="60.0" layoutY="351.0" mnemonicParsing="false" text="Cantidad de contactos por cada vendedor">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font></RadioButton>
+                        <Button fx:id="btnExportar" layoutX="232.0" layoutY="580.0" mnemonicParsing="false" onAction="#onExportar" prefHeight="63.0" prefWidth="142.0" style="-fx-background-color: #47493C; -fx-text-fill: #ffffff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2); -fx-border-color: #A39992; -fx-border-width: 2;" text="Exportar">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@CSS/Crus.css" />
+                              <URL value="@CSS/Style.css" />
+                           </stylesheets></Button>
+                        <ChoiceBox fx:id="chbNombreVendedores" layoutX="510.0" layoutY="279.0" prefHeight="26.0" prefWidth="174.0" />
+                        <RadioButton fx:id="rbtnTopProductos" layoutX="60.0" layoutY="430.0" mnemonicParsing="false" text="Top 10 de los productos con más me gusta.">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font></RadioButton>
+                        <Label fx:id="mensajeLabel" layoutX="60.0" layoutY="726.0" />
+                        <DatePicker fx:id="DatepikerAdmin" layoutX="526.0" layoutY="200.0" promptText="dd/MM/yyyy" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#46473c" height="70.0" stroke="BLACK" strokeType="INSIDE" width="1254.0" />
+                        <Label layoutX="338.0" layoutY="-7.0" prefHeight="85.0" prefWidth="596.0" style="-fx-text-fill: #FFFFFF;" text="LUXURY MARKET" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="57.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="AdminVendedor" text="Vendedores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="659.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#46473c" height="70.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="1254.0" />
+                        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#888176" height="713.0" layoutX="11.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+                        <Label layoutX="330.0" layoutY="-7.0" prefHeight="85.0" prefWidth="596.0" style="-fx-text-fill: #FFFFFF;" text="LUXURY MARKET" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="57.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNombreVendedor" layoutX="98.0" layoutY="231.0" prefHeight="29.0" prefWidth="233.0" promptText="NOMBRE" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtCedula" layoutX="97.0" layoutY="392.0" prefHeight="29.0" prefWidth="234.0" promptText="CEDULA" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtApellidoVendedor" layoutX="98.0" layoutY="312.0" prefHeight="29.0" prefWidth="233.0" promptText="APELLIDOS" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtDireccionVendedor" layoutX="97.0" layoutY="472.0" prefHeight="29.0" prefWidth="235.0" promptText="DIRECCIÓN" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtUsuarioVendedor" layoutX="97.0" layoutY="550.0" prefHeight="29.0" prefWidth="235.0" promptText="USUARIO" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtContrasenaVendedor" layoutX="97.0" layoutY="634.0" prefHeight="29.0" prefWidth="238.0" promptText="CONTRASEÑA" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></TextField>
+                        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#888176" height="107.0" layoutX="363.0" layoutY="682.0" stroke="BLACK" strokeType="INSIDE" width="885.0" />
+                        <Button fx:id="bntAgragarVendedor" layoutX="446.0" layoutY="706.0" mnemonicParsing="false" onAction="#onAgregarVendedor" prefHeight="59.0" prefWidth="131.0" style="-fx-background-color: #47493C; -fx-text-fill: #ffffff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2); -fx-border-color: #A39992; -fx-border-width: 2;" text="AGREGAR">
+                           <stylesheets>
+                              <URL value="@CSS/Crus.css" />
+                              <URL value="@CSS/Style.css" />
+                           </stylesheets>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="bntActualizarVendedor" layoutX="740.0" layoutY="705.0" mnemonicParsing="false" onAction="#onActualizarVendedor" prefHeight="61.0" prefWidth="132.0" style="-fx-background-color: #47493C; -fx-text-fill: #ffffff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2); -fx-border-color: #A39992; -fx-border-width: 2;" text="ACTUALIZAR">
+                           <stylesheets>
+                              <URL value="@CSS/Crus.css" />
+                              <URL value="@CSS/Style.css" />
+                           </stylesheets>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="btnEliminarVendedor" layoutX="1029.0" layoutY="705.0" mnemonicParsing="false" onAction="#onEliminarVendedor" prefHeight="62.0" prefWidth="131.0" style="-fx-background-color: #47493C; -fx-text-fill: #ffffff; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2); -fx-border-color: #A39992; -fx-border-width: 2;" text="ELIMINAR">
+                           <stylesheets>
+                              <URL value="@CSS/Crus.css" />
+                              <URL value="@CSS/Style.css" />
+                           </stylesheets>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#888176" height="597.0" layoutX="363.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" width="885.0" />
+                        <TableView fx:id="tableVendedores" layoutX="385.0" layoutY="128.0" prefHeight="497.0" prefWidth="841.0" style="-fx-background-color: #2E2F26;">
+                          <columns>
+                            <TableColumn fx:id="tbNombreVendedor" prefWidth="136.0" text="Nombre" />
+                            <TableColumn fx:id="tbApellidoVendedor" prefWidth="131.0" text="Apellido" />
+                              <TableColumn fx:id="tbCedulaVendedor" prefWidth="128.0" text="Cedula" />
+                              <TableColumn fx:id="tbDireccionVendedor" prefWidth="161.0" text="Direccion" />
+                              <TableColumn fx:id="tbUsuarioVendedor" prefWidth="146.0" text="Usuario" />
+                              <TableColumn fx:id="tbContrasenaVendedor" prefWidth="147.0" text="Contraseña" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="77.0" layoutY="95.0" prefHeight="85.0" prefWidth="229.0" style="-fx-text-fill: #FFFFFF;" text="DATOS">
+                           <font>
+                              <Font name="Arial Black" size="57.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+.button {
+    -fx-background-color: #47493C;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+    -fx-background-color: #2E2F26;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+}
+
+.button:pressed {
+    -fx-background-color: #13140F;
+    -fx-translate-y: 2px;
+}
+
+.button:hover {
+    -fx-translate-y: -5px; /* Efecto de elevación */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 2);
+}
+
+.button:hover {
+    -fx-border-width: 2px;  /* El borde aparece */
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2E2F26;
+    -fx-scale-x: 1.05; /* Ligeramente agrandar */
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+}
+
+/* Al hacer clic */
+.button:pressed {
+    -fx-background-color: #13140F;
+    -fx-translate-y: 2px; /* Efecto de presión */
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="496.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.programacion2.proyectofinalp2.viewController.LoginViewController">
+   <children>
+      <Polygon fill="DODGERBLUE" layoutY="60.0" points="496.0, 279.0, 0.0, 618.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0); -fx-fill: #888176;" />
+      <Button fx:id="btnIngresar" cache="true" graphicTextGap="0.0" layoutX="36.0" layoutY="430.0" mnemonicParsing="false" onAction="#onbtnIngresar" prefHeight="50.0" prefWidth="234.0" style="-fx-background-color: #47493C; -fx-border-color: #A39992; -fx-border-width: 2; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" text="INGRESAR" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <stylesheets>
+            <URL value="@CSS/Crus.css" />
+            <URL value="@CSS/Style.css" />
+         </stylesheets>
+      </Button>
+      <PasswordField fx:id="txtContrasena" layoutX="48.0" layoutY="329.0" prefHeight="34.0" prefWidth="234.0" promptText="CONTRASEÑA" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;" />
+      <TextField fx:id="txtNombreUsuario" layoutX="46.0" layoutY="262.0" prefHeight="32.0" prefWidth="234.0" promptText="USUARIO" style="-fx-background-color: transparent; -fx-border-color: transparent transparent  #47493C transparent; -fx-border-width: 0 0 2 0; -fx-padding: 5 0 5 0;">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <Polygon fill="DODGERBLUE" layoutX="426.0" layoutY="488.0" points="70.0, 190.0, 70.0, -142.0, -164.0, 17.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0); -fx-fill: #47493C;" />
+   </children>
+   <styleClass>
+      <String fx:value="background" />
+      <String fx:value="colorBtn" />
+   </styleClass>
+</AnchorPane>
